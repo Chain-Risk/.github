@@ -62,6 +62,27 @@ you are authorized to make that certification.
 **Pull requests containing unsigned or non-DCO-signed commits are not eligible
 for merge.** Maintainers may ask you to re-sign/rebase and resubmit them.
 
+### DCO-2 validation
+
+Chain-Risk uses the CNCF DCO-2 GitHub App to validate DCO sign-offs
+on pull requests.
+
+DCO-2 checks every commit for a valid `Signed-off-by` trailer.
+Every commit must pass this check before it is eligible for merging.
+
+DCO-2 validates DCO sign-offs; it does not verify cryptographic
+commit signatures. GitHub's signed-commit ruleset enforces that
+separate requirement.
+
+If validation fails:
+- Inspect the DCO-2 check details to identify affected commits.
+- Correct missing or invalid sign-offs.
+- Ensure every commit has an appropriate DCO sign-off.
+- Push the corrected commits and check the result again.
+
+For more information, see the
+[CNCF DCO-2 documentation](https://github.com/cncf/dco2).
+
 ## 3. Development workflow
 
 1. Fork the relevant repository and create a focused branch.
