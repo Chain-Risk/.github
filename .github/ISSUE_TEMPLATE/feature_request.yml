@@ -1,0 +1,46 @@
+name: Feature request
+description: Propose an improvement or new capability.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For security vulnerabilities, do not use this form. Follow SECURITY.md
+        and report privately.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What problem are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior or capability you would like.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What alternatives or workarounds have you considered?
+    validations:
+      required: false
+  - type: textarea
+    id: security
+    attributes:
+      label: Security and supply-chain considerations
+      description: Could this change affect trust boundaries, data handling, dependencies, or permissions?
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched existing issues for similar requests.
+          required: true
+        - label: This request does not disclose a vulnerability or sensitive information.
+          required: true
